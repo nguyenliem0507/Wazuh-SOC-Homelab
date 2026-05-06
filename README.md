@@ -2,7 +2,7 @@
 
 > A hands-on Security Operations Center (SOC) lab simulating real-world adversary behaviors and detecting them using Wazuh SIEM/EDR, mapped to the MITRE ATT&CK framework.
 
-![Network Topology](./network_topology.png)
+![Network Topology](./network_topology.jpg)
 
 ---
 
