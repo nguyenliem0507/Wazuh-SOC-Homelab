@@ -1,0 +1,20 @@
+<group name="ransomware,windows,">
+
+  <!-- 
+    Rule: Detect Shadow Copy Deletion via vssadmin.exe
+    Author: nguyenliem0507
+    MITRE ATT&CK: T1490 - Inhibit System Recovery
+    Description: Detects when vssadmin.exe is used to delete shadow copies,
+                 a common ransomware pre-encryption technique used by WannaCry,
+                 LockBit, REvil, and other ransomware families.
+  -->
+  <rule id="100001" level="15">
+    <if_group>windows</if_group>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)vssadmin.*delete.*shadows</field>
+    <description>[Homelab] RANSOMWARE ACTIVITY: Shadow Copy deletion detected - Possible Ransomware execution (T1490)</description>
+    <mitre>
+      <id>T1490</id>
+    </mitre>
+  </rule>
+
+</group>
